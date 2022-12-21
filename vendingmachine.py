@@ -198,15 +198,15 @@ def order():
     credits = int(input('Please insert an amount to proceed to buy an item in the vending machine:\n'))
 
     #invalid amount
-    if credits == 0:
+    if credits <= 0:
       print('Please enter a valid amount\n')
       order()
 
     #asks user input of the displayed items
     iteminput = int(input('Please input the number of your desired item\n'))
-    
+
     #product does not exist message
-    if iteminput >= 21:
+    if iteminput >= 21 or iteminput <= 0:
       print('Product does not exist or is invalid')
       
     cart = []
